@@ -8,7 +8,7 @@ client/build/
 dist/
 
 # Environment variables
-.env
+server/.env
 .env.local
 .env.development.local
 .env.test.local
@@ -36,3 +36,7 @@ coverage/
 
 # Misc
 .cache/
+
+# Keep example env files
+!server/.env.example
+!client/.env.production

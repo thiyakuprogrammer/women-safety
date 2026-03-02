@@ -21,7 +21,8 @@ const apiCall = async (endpoint, options = {}) => {
     return data;
   } catch (error) {
     console.error('API Error:', error);
-    throw error;
+    // Return mock data structure on error for demo purposes
+    return { success: false, data: [], error: error.message };
   }
 };
 
