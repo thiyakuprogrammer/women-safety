@@ -1,0 +1,481 @@
+.sos-page {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #fff5f7 0%, #ffe0e6 100%);
+  min-height: calc(100vh - 70px);
+}
+
+.sos-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sos-header h1 {
+  font-size: 3rem;
+  color: #ff1744;
+  margin-bottom: 16px;
+}
+
+.sos-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Main SOS Button */
+.sos-button-container {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.sos-button {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff1744 0%, #f50057 100%);
+  border: 8px solid #fff;
+  box-shadow: 0 8px 32px rgba(255, 23, 68, 0.4),
+              0 0 0 0 rgba(255, 23, 68, 0.7);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 8px 32px rgba(255, 23, 68, 0.4),
+                0 0 0 0 rgba(255, 23, 68, 0.7);
+  }
+  50% {
+    box-shadow: 0 8px 32px rgba(255, 23, 68, 0.4),
+                0 0 0 20px rgba(255, 23, 68, 0);
+  }
+  100% {
+    box-shadow: 0 8px 32px rgba(255, 23, 68, 0.4),
+                0 0 0 0 rgba(255, 23, 68, 0);
+  }
+}
+
+.sos-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(255, 23, 68, 0.5);
+}
+
+.sos-button:active {
+  transform: scale(0.95);
+}
+
+.sos-icon {
+  font-size: 5rem;
+  margin-bottom: 8px;
+}
+
+.sos-text {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 4px;
+}
+
+.sos-subtext {
+  font-size: 1rem;
+  color: white;
+  opacity: 0.9;
+  margin-top: 8px;
+}
+
+.sos-instruction {
+  margin-top: 24px;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Emergency Contacts */
+.emergency-contacts-section {
+  margin: 60px 0;
+}
+
+.emergency-contacts-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 32px;
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.contact-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.contact-card h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.btn-call {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.btn-call:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+/* Map Section */
+.map-section {
+  margin: 60px 0;
+}
+
+.map-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 32px;
+}
+
+.map-container {
+  max-width: 900px;
+  margin: 0 auto 32px;
+}
+
+.mock-map {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border-radius: 12px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-marker {
+  position: absolute;
+  background: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+}
+
+.user-marker {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4caf50;
+  color: white;
+}
+
+.police-marker {
+  top: 30%;
+  left: 30%;
+  background-color: #2196f3;
+  color: white;
+}
+
+.hospital-marker {
+  top: 60%;
+  left: 70%;
+  background-color: #f44336;
+  color: white;
+}
+
+.map-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #666;
+}
+
+.map-overlay p {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.services-list {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  gap: 16px;
+}
+
+.service-item:last-child {
+  border-bottom: none;
+}
+
+.service-icon {
+  font-size: 2rem;
+}
+
+.service-info {
+  flex: 1;
+}
+
+.service-info h4 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.service-info p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.btn-navigate {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-navigate:hover {
+  background-color: #1976d2;
+}
+
+/* Instructions */
+.instructions-section {
+  margin: 60px 0;
+}
+
+.instructions-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 32px;
+}
+
+.instructions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.instruction-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.instruction-number {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #e91e63 0%, #f06292 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 16px;
+}
+
+.instruction-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.instruction-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* SOS Modal */
+.sos-modal {
+  text-align: center;
+}
+
+.modal-icon {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+.modal-icon.success {
+  color: #4caf50;
+}
+
+.sos-modal h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.sos-modal p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-confirm {
+  background-color: #ff1744;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-confirm:hover {
+  background-color: #d50000;
+  transform: scale(1.05);
+}
+
+.btn-cancel {
+  background-color: #9e9e9e;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+  background-color: #757575;
+}
+
+.alert-status {
+  background-color: #f1f8f4;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 24px 0;
+  text-align: left;
+}
+
+.alert-status p {
+  font-size: 1.1rem;
+  color: #4caf50;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.alert-status p:last-child {
+  margin-bottom: 0;
+}
+
+.stay-safe {
+  font-size: 1.3rem !important;
+  color: #333 !important;
+  font-weight: 600 !important;
+}
+
+.btn-close {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-close:hover {
+  background-color: #1976d2;
+}
+
+@media (max-width: 768px) {
+  .sos-button {
+    width: 220px;
+    height: 220px;
+  }
+
+  .sos-icon {
+    font-size: 4rem;
+  }
+
+  .sos-text {
+    font-size: 2.5rem;
+  }
+
+  .mock-map {
+    height: 300px;
+  }
+
+  .instructions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .btn-confirm,
+  .btn-cancel,
+  .btn-close {
+    width: 100%;
+  }
+}
